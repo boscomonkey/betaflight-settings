@@ -1,5 +1,5 @@
 # dump
-# Betaflight / SPRACINGF3 3.1.6 Feb 21 2017 / 14:44:08 (1fd502c)
+# Betaflight / SPRACINGF3 3.1.7 Apr  3 2017 / 22:27:23 (e1c4b5c)
 name Goby 180 SPRF3
 resource BEEPER 1 C15
 resource MOTOR 1 A06
@@ -99,11 +99,11 @@ feature -VTX
 feature -RX_SPI
 feature -SOFTSPI
 feature -ESC_SENSOR
+feature -FEATURE_ANTI_GRAVITY
 feature VBAT
 feature RX_SERIAL
 feature FAILSAFE
 feature TELEMETRY
-feature RSSI_ADC
 feature LED_STRIP
 feature BLACKBOX
 beeper GYRO_CALIBRATED
@@ -128,10 +128,10 @@ map AETR1234
 serial 0 1 115200 57600 0 115200
 serial 1 32 115200 57600 0 115200
 serial 2 64 115200 57600 0 115200
-led 0 4,15::AO:3
-led 1 5,15::AO:3
-led 2 6,15::AO:3
-led 3 7,15::AO:3
+led 0 4,15::AO:0
+led 1 5,15::AO:0
+led 2 6,15::AO:0
+led 3 7,15::AO:0
 led 4 8,15::AO:0
 led 5 9,15::AO:0
 led 6 10,15::AO:0
@@ -212,7 +212,7 @@ mode_color 5 2 2
 mode_color 5 3 13
 mode_color 5 4 10
 mode_color 5 5 3
-mode_color 6 0 5
+mode_color 6 0 6
 mode_color 6 1 2
 mode_color 6 2 1
 mode_color 6 3 0
@@ -225,11 +225,11 @@ mode_color 6 9 0
 mode_color 6 10 0
 mode_color 7 0 3
 aux 0 0 4 1700 2100
-aux 1 27 0 1300 1700
+aux 1 28 0 1300 1700
 aux 2 2 0 1700 2100
-aux 3 26 1 1700 2100
-aux 4 12 1 1300 1700
-aux 5 25 3 1300 2100
+aux 3 27 1 1700 2100
+aux 4 13 1 1300 1700
+aux 5 26 3 1700 2100
 aux 6 0 0 900 900
 aux 7 0 0 900 900
 aux 8 0 0 900 900
@@ -290,12 +290,12 @@ set rssi_scale = 30
 set rc_interp = AUTO
 set rc_interp_ch = RP
 set rc_interp_int = 19
-set rssi_ppm_invert = OFF
+set rssi_invert = OFF
 set input_filtering_mode = OFF
 set fpv_mix_degrees = 0
 set max_aux_channels = 14
 set debug_mode = NOTCH
-set min_throttle = 1035
+set min_throttle = 1040
 set max_throttle = 2000
 set min_command = 1000
 set digital_idle_percent =  4.500
@@ -341,7 +341,7 @@ set hott_alarm_int = 5
 set pid_in_tlm = OFF
 set bat_capacity = 0
 set vbat_scale = 112
-set vbat_max_cell_voltage = 44
+set vbat_max_cell_voltage = 43
 set vbat_min_cell_voltage = 33
 set vbat_warning_cell_voltage = 35
 set vbat_hysteresis = 1
@@ -360,11 +360,11 @@ set align_mag = DEFAULT
 set align_board_roll = 0
 set align_board_pitch = 0
 set align_board_yaw = 90
-set gyro_lpf = OFF
-set gyro_sync_denom = 2
+set gyro_lpf = 188HZ
+set gyro_sync_denom = 1
 set gyro_use_32khz = OFF
 set gyro_lowpass_type = PT1
-set gyro_lowpass = 90
+set gyro_lowpass = 50
 set gyro_notch1_hz = 220
 set gyro_notch1_cut = 110
 set gyro_notch2_hz = 0
@@ -374,8 +374,8 @@ set imu_dcm_kp = 2500
 set imu_dcm_ki = 0
 set alt_hold_deadband = 40
 set alt_hold_fast_change = ON
-set deadband = 4
-set yaw_deadband = 2
+set deadband = 3
+set yaw_deadband = 0
 set thr_corr_value = 0
 set thr_corr_angle = 800
 set yaw_control_direction = 1
@@ -410,7 +410,7 @@ set baro_cf_alt =  0.965
 set baro_hardware = NONE
 set mag_hardware = NONE
 set mag_declination = 0
-set pid_process_denom = 2
+set pid_process_denom = 1
 set blackbox_rate_num = 1
 set blackbox_rate_denom = 1
 set blackbox_device = SPIFLASH
@@ -432,28 +432,28 @@ set gps_posr_d = 53
 set gps_nav_p = 25
 set gps_nav_i = 33
 set gps_nav_d = 83
-set yaw_p_limit = 500
 set pidsum_limit =  0.500
-set d_lowpass_type = BIQUAD
-set d_lowpass = 90
-set d_notch_hz = 220
-set d_notch_cut = 100
+set pidsum_limit_yaw =  0.500
+set d_lowpass_type = PT1
+set d_lowpass = 100
+set d_notch_hz = 260
+set d_notch_cut = 160
 set vbat_pid_gain = OFF
 set pid_at_min_throttle = ON
 set anti_gravity_thresh = 350
-set anti_gravity_gain =  1.000
-set setpoint_relax_ratio = 20
-set d_setpoint_weight = 100
+set anti_gravity_gain =  3.000
+set setpoint_relax_ratio = 100
+set d_setpoint_weight = 60
 set yaw_accel_limit =  10.000
 set accel_limit =  0.000
 set iterm_windup = 50
 set yaw_lowpass = 80
 set p_pitch = 58
 set i_pitch = 50
-set d_pitch = 22
+set d_pitch = 35
 set p_roll = 44
 set i_roll = 40
-set d_roll = 20
+set d_roll = 30
 set p_yaw = 70
 set i_yaw = 45
 set d_yaw = 20
@@ -477,8 +477,8 @@ set rc_expo = 20
 set rc_yaw_expo = 20
 set thr_mid = 50
 set thr_expo = 0
-set roll_srate = 72
-set pitch_srate = 72
+set roll_srate = 73
+set pitch_srate = 73
 set yaw_srate = 72
 set tpa_rate = 10
 set tpa_breakpoint = 1650
