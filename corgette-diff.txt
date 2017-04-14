@@ -1,0 +1,85 @@
+# diff
+
+# version
+# Betaflight / OMNIBUSF4SD 3.1.6 Feb 21 2017 / 14:34:26 (1fd502c)
+
+# name
+name CorgetteF4
+
+# resources
+
+# mixer
+
+# servo
+
+# servo mix
+
+
+# feature
+feature TELEMETRY
+feature CURRENT_METER
+feature LED_STRIP
+
+# beeper
+
+# map
+
+# serial
+serial 0 64 115200 57600 0 115200
+serial 2 32 115200 57600 0 115200
+serial 5 2048 115200 57600 0 115200
+
+# led
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 4 1700 2100
+aux 1 27 0 1300 1700
+aux 2 2 0 1700 2100
+aux 3 26 1 1700 2100
+aux 4 12 1 1300 1700
+aux 5 25 3 1700 2100
+aux 6 18 5 1700 2100
+
+# adjrange
+
+# rxrange
+
+# rxfail
+
+# master
+set debug_mode = NOTCH
+set digital_idle_percent =  2.250
+set motor_pwm_protocol = DSHOT600
+set serialrx_provider = SBUS
+set ibat_scale = 500
+set failsafe_delay = 2
+set baro_hardware = AUTO
+set pid_process_denom = 1
+set osd_cap_alarm = 1100
+set osd_vbat_pos = 2091
+set osd_throttle_pos = 2177
+set osd_vtx_channel_pos = 2248
+set osd_crosshairs = 2048
+set osd_current_pos = 2145
+set osd_mah_drawn_pos = 2159
+set osd_craft_name_pos = 2444
+set osd_altitude_pos = 2209
+set osd_power_pos = 2127
+
+# profile
+profile 0
+
+rateprofile 0
+
+# rateprofile
+rateprofile 0
+
+set rc_expo = 20
+set rc_yaw_expo = 20
+set roll_srate = 71
+set pitch_srate = 71
+set yaw_srate = 71

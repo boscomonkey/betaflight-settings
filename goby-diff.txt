@@ -1,0 +1,56 @@
+# diff
+# Betaflight / SPRACINGF3 3.1.6 Feb 21 2017 / 14:44:08 (1fd502c)
+name Goby 180 SPRF3
+
+feature -RX_PPM
+feature -CURRENT_METER
+feature -TRANSPONDER
+feature RX_SERIAL
+feature LED_STRIP
+serial 1 32 115200 57600 0 115200
+serial 2 64 115200 57600 0 115200
+led 0 4,15::AO:3
+led 1 5,15::AO:3
+led 2 6,15::AO:3
+led 3 7,15::AO:3
+led 4 8,15::AO:0
+led 5 9,15::AO:0
+led 6 10,15::AO:0
+led 7 11,15::AO:0
+mode_color 6 0 5
+mode_color 6 1 2
+aux 0 0 4 1700 2100
+aux 1 27 0 1300 1700
+aux 2 2 0 1700 2100
+aux 3 26 1 1700 2100
+aux 4 12 1 1300 1700
+aux 5 25 3 1300 2100
+set debug_mode = NOTCH
+set min_throttle = 1035
+set motor_pwm_protocol = MULTISHOT
+set serialrx_provider = SBUS
+set vbat_scale = 112
+set vbat_max_cell_voltage = 44
+set align_board_yaw = 90
+set gyro_sync_denom = 2
+set gyro_notch1_hz = 220
+set gyro_notch1_cut = 110
+set gyro_notch2_hz = 0
+set gyro_notch2_cut = 0
+set deadband = 4
+set yaw_deadband = 2
+set failsafe_delay = 2
+profile 0
+
+set d_lowpass = 90
+set d_notch_hz = 220
+set d_notch_cut = 100
+set yaw_lowpass = 80
+rateprofile 0
+rateprofile 0
+
+set rc_expo = 20
+set rc_yaw_expo = 20
+set roll_srate = 72
+set pitch_srate = 72
+set yaw_srate = 72
