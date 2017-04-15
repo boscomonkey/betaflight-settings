@@ -1,7 +1,7 @@
 # dump
 
 # version
-# Betaflight / OMNIBUSF4SD 3.1.6 Feb 21 2017 / 14:34:26 (1fd502c)
+# Betaflight / OMNIBUSF4SD 3.1.7 Apr  3 2017 / 22:15:40 (e1c4b5c)
 
 # name
 name CorgetteF4
@@ -37,7 +37,7 @@ resource PWM 5 C08
 resource PWM 6 C09
 resource PWM 7 NONE
 resource PWM 8 NONE
-resource LED_STRIP 1 A08
+resource LED_STRIP 1 B06
 resource SERIAL_TX 1 A09
 resource SERIAL_TX 2 NONE
 resource SERIAL_TX 3 B10
@@ -113,6 +113,7 @@ feature -VTX
 feature -RX_SPI
 feature -SOFTSPI
 feature -ESC_SENSOR
+feature -FEATURE_ANTI_GRAVITY
 feature VBAT
 feature RX_SERIAL
 feature FAILSAFE
@@ -256,12 +257,12 @@ mode_color 7 0 3
 
 # aux
 aux 0 0 4 1700 2100
-aux 1 27 0 1300 1700
+aux 1 28 0 1300 1700
 aux 2 2 0 1700 2100
-aux 3 26 1 1700 2100
-aux 4 12 1 1300 1700
-aux 5 25 3 1700 2100
-aux 6 18 5 1700 2100
+aux 3 27 1 1700 2100
+aux 4 13 1 1300 1700
+aux 5 26 3 1700 2100
+aux 6 19 5 1700 2100
 aux 7 0 0 900 900
 aux 8 0 0 900 900
 aux 9 0 0 900 900
@@ -329,7 +330,7 @@ set rssi_scale = 30
 set rc_interp = AUTO
 set rc_interp_ch = RP
 set rc_interp_int = 19
-set rssi_ppm_invert = OFF
+set rssi_invert = OFF
 set input_filtering_mode = OFF
 set fpv_mix_degrees = 0
 set max_aux_channels = 14
@@ -462,7 +463,7 @@ set magzero_y = 0
 set magzero_z = 0
 set ledstrip_visual_beeper = OFF
 set sdcard_dma = ON
-set osd_units = IMPERIAL
+set osd_units = METRIC
 set osd_rssi_alarm = 20
 set osd_cap_alarm = 1100
 set osd_time_alarm = 10
@@ -471,7 +472,7 @@ set osd_vbat_pos = 2091
 set osd_rssi_pos = 22
 set osd_flytimer_pos = 2454
 set osd_ontimer_pos = 2422
-set osd_flymode_pos = 2412
+set osd_flymode_pos = 364
 set osd_throttle_pos = 2177
 set osd_vtx_channel_pos = 2248
 set osd_crosshairs = 2048
@@ -497,7 +498,7 @@ set displayport_max7456_col_adjust = 0
 set displayport_max7456_row_adjust = 0
 
 # profile
-profile 0
+profile 2
 
 set gps_pos_p = 15
 set gps_pos_i = 0
@@ -508,8 +509,8 @@ set gps_posr_d = 53
 set gps_nav_p = 25
 set gps_nav_i = 33
 set gps_nav_d = 83
-set yaw_p_limit = 500
 set pidsum_limit =  0.500
+set pidsum_limit_yaw =  0.500
 set d_lowpass_type = BIQUAD
 set d_lowpass = 100
 set d_notch_hz = 260
@@ -517,19 +518,19 @@ set d_notch_cut = 160
 set vbat_pid_gain = OFF
 set pid_at_min_throttle = ON
 set anti_gravity_thresh = 350
-set anti_gravity_gain =  1.000
-set setpoint_relax_ratio = 20
-set d_setpoint_weight = 100
+set anti_gravity_gain =  3.000
+set setpoint_relax_ratio = 100
+set d_setpoint_weight = 60
 set yaw_accel_limit =  10.000
 set accel_limit =  0.000
 set iterm_windup = 50
 set yaw_lowpass = 0
 set p_pitch = 58
 set i_pitch = 50
-set d_pitch = 22
+set d_pitch = 35
 set p_roll = 44
 set i_roll = 40
-set d_roll = 20
+set d_roll = 30
 set p_yaw = 70
 set i_yaw = 45
 set d_yaw = 20
