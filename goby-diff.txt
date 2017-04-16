@@ -24,7 +24,8 @@ aux 1 28 0 1300 1700
 aux 2 2 0 1700 2100
 aux 3 27 1 1700 2100
 aux 4 13 1 1300 1700
-aux 5 26 3 1700 2100
+aux 5 15 5 1300 1700
+aux 6 26 3 1700 2100
 set debug_mode = NOTCH
 set min_throttle = 1040
 set motor_pwm_protocol = MULTISHOT
