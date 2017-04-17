@@ -28,7 +28,8 @@ aux 5 15 5 1300 1700
 aux 6 26 3 1700 2100
 set debug_mode = NOTCH
 set min_throttle = 1040
-set motor_pwm_protocol = MULTISHOT
+set digital_idle_percent =  3.500
+set motor_pwm_protocol = DSHOT600
 set serialrx_provider = SBUS
 set vbat_scale = 112
 set align_board_yaw = 90
