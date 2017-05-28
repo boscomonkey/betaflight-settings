@@ -52,7 +52,7 @@ aux 6 19 5 1700 2100
 
 # master
 set debug_mode = NOTCH
-set digital_idle_percent =  2.250
+set digital_idle_percent =  2.330
 set motor_pwm_protocol = DSHOT600
 set serialrx_provider = SBUS
 set ibat_scale = 500
