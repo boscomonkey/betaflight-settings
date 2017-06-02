@@ -35,13 +35,12 @@ set vbat_scale = 112
 set align_board_yaw = 90
 set gyro_sync_denom = 2
 set gyro_lowpass = 80
-set gyro_notch1_hz = 220
-set gyro_notch1_cut = 110
-set gyro_notch2_hz = 0
-set gyro_notch2_cut = 0
+set gyro_notch1_hz = 0
+set gyro_notch1_cut = 0
+set gyro_notch2_hz = 220
+set gyro_notch2_cut = 110
 set deadband = 3
 set failsafe_delay = 2
-set pid_process_denom = 1
 profile 0
 
 set d_lowpass_type = PT1
