@@ -39,7 +39,8 @@ set gyro_notch1_hz = 0
 set gyro_notch1_cut = 0
 set gyro_notch2_hz = 220
 set gyro_notch2_cut = 110
-set deadband = 3
+set deadband = 4
+set yaw_deadband = 4
 set failsafe_delay = 2
 profile 0
 
