@@ -27,6 +27,7 @@ set vbat_scale = 112
 set gyro_lowpass = 100
 set gyro_notch1_hz = 0
 set gyro_notch1_cut = 0
+set gyro_notch2_cut = 150
 set deadband = 4
 set yaw_deadband = 3
 set failsafe_delay = 2
@@ -44,6 +45,7 @@ set vcd_video_system = 2
 profile 0
 
 set d_lowpass = 110
+set d_notch_hz = 220
 rateprofile 0
 rateprofile 0
 
