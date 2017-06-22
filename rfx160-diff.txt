@@ -1,0 +1,54 @@
+# diff
+# Betaflight / OMNIBUS 3.1.7 Apr  3 2017 / 22:14:20 (e1c4b5c)
+name Bosco RFX 160
+resource MOTOR 1 A02
+resource MOTOR 2 A03
+resource MOTOR 3 B09
+resource MOTOR 4 B08
+
+feature -RX_PPM
+feature -CURRENT_METER
+feature RX_SERIAL
+feature TELEMETRY
+serial 1 32 115200 57600 0 115200
+serial 2 64 115200 57600 0 115200
+aux 0 0 4 1700 2100
+aux 1 28 0 1300 1700
+aux 2 2 0 1700 2100
+aux 3 27 1 1700 2100
+aux 4 13 1 1300 1700
+aux 5 26 3 1700 2100
+aux 6 19 5 1300 1700
+set debug_mode = NOTCH
+set digital_idle_percent =  3.600
+set motor_pwm_protocol = DSHOT600
+set serialrx_provider = SBUS
+set vbat_scale = 112
+set gyro_lowpass = 100
+set gyro_notch1_hz = 0
+set gyro_notch1_cut = 0
+set deadband = 4
+set yaw_deadband = 3
+set failsafe_delay = 2
+set baro_hardware = AUTO
+set pid_process_denom = 2
+set blackbox_rate_denom = 4
+set osd_units = METRIC
+set osd_vbat_pos = 2092
+set osd_rssi_pos = 54
+set osd_flymode_pos = 2102
+set osd_crosshairs = 2048
+set osd_craft_name_pos = 2434
+set osd_altitude_pos = 2082
+set vcd_video_system = 2
+profile 0
+
+set d_lowpass = 110
+rateprofile 0
+rateprofile 0
+
+set rc_expo = 20
+set rc_yaw_expo = 20
+set roll_srate = 73
+set pitch_srate = 73
+set yaw_srate = 73
