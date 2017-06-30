@@ -76,6 +76,7 @@ set osd_mah_drawn_pos = 2254
 set osd_craft_name_pos = 2434
 set osd_altitude_pos = 2210
 set osd_power_pos = 79
+set vcd_video_system = 2
 
 # profile
 profile 2
