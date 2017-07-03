@@ -1,6 +1,6 @@
 # diff
 # Betaflight / SPRACINGF3 3.1.7 Apr  3 2017 / 22:27:23 (e1c4b5c)
-name Goby 180 SPRF3
+name Bosco Goby 180
 
 feature -RX_PPM
 feature -CURRENT_METER
@@ -10,14 +10,10 @@ feature RX_SERIAL
 feature LED_STRIP
 serial 1 32 115200 57600 0 115200
 serial 2 64 115200 57600 0 115200
-led 0 4,15::AO:0
-led 1 5,15::AO:0
-led 2 6,15::AO:0
-led 3 7,15::AO:0
-led 4 8,15::AO:0
-led 5 9,15::AO:0
-led 6 10,15::AO:0
-led 7 11,15::AO:0
+led 0 6,15::AOIW:0
+led 1 7,15::AOIW:0
+led 2 8,15::AOIW:0
+led 3 9,15::AOIW:0
 mode_color 6 1 2
 aux 0 0 4 1700 2100
 aux 1 28 0 1300 1700
