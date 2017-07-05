@@ -44,6 +44,8 @@ profile 0
 set d_lowpass_type = PT1
 set d_lowpass = 110
 set yaw_lowpass = 125
+set d_pitch = 16
+set d_roll = 15
 rateprofile 0
 rateprofile 0
 
