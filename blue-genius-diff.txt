@@ -51,7 +51,7 @@ aux 6 19 5 1700 2100
 
 # master
 set debug_mode = NOTCH
-set digital_idle_percent =  2.330
+set digital_idle_percent =  2.900
 set motor_pwm_protocol = DSHOT600
 set serialrx_provider = SBUS
 set ibat_scale = 500
@@ -66,7 +66,7 @@ set blackbox_rate_denom = 8
 set sdcard_dma = OFF
 set osd_units = METRIC
 set osd_cap_alarm = 1100
-set osd_vbat_pos = 2114
+set osd_vbat_pos = 2062
 set osd_flytimer_pos = 406
 set osd_ontimer_pos = 374
 set osd_flymode_pos = 364
