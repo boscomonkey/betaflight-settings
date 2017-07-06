@@ -1,10 +1,10 @@
 # diff
 
 # version
-# Betaflight / OMNIBUSF4SD 3.1.6 Feb 21 2017 / 14:34:26 (1fd502c)
+# Betaflight / OMNIBUSF4SD 3.1.7 Apr  3 2017 / 22:15:40 (e1c4b5c)
 
 # name
-name CorgetteF4
+name Bosco BlueGenius
 
 # resources
 
@@ -18,7 +18,6 @@ name CorgetteF4
 # feature
 feature TELEMETRY
 feature CURRENT_METER
-feature LED_STRIP
 
 # beeper
 
@@ -37,12 +36,12 @@ serial 5 2048 115200 57600 0 115200
 
 # aux
 aux 0 0 4 1700 2100
-aux 1 27 0 1300 1700
+aux 1 28 0 1300 1700
 aux 2 2 0 1700 2100
-aux 3 26 1 1700 2100
-aux 4 12 1 1300 1700
-aux 5 25 3 1700 2100
-aux 6 18 5 1700 2100
+aux 3 27 1 1700 2100
+aux 4 13 1 1300 1700
+aux 5 26 3 1700 2100
+aux 6 19 5 1700 2100
 
 # adjrange
 
@@ -52,27 +51,38 @@ aux 6 18 5 1700 2100
 
 # master
 set debug_mode = NOTCH
-set digital_idle_percent =  2.250
+set digital_idle_percent =  2.330
 set motor_pwm_protocol = DSHOT600
 set serialrx_provider = SBUS
 set ibat_scale = 500
+set gyro_lowpass = 100
+set gyro_notch1_hz = 0
+set gyro_notch1_cut = 0
+set yaw_deadband = 4
 set failsafe_delay = 2
 set baro_hardware = AUTO
 set pid_process_denom = 1
+set blackbox_rate_denom = 8
+set sdcard_dma = OFF
+set osd_units = METRIC
 set osd_cap_alarm = 1100
-set osd_vbat_pos = 2091
-set osd_throttle_pos = 2177
-set osd_vtx_channel_pos = 2248
-set osd_crosshairs = 2048
-set osd_current_pos = 2145
-set osd_mah_drawn_pos = 2159
-set osd_craft_name_pos = 2444
-set osd_altitude_pos = 2209
-set osd_power_pos = 2127
+set osd_vbat_pos = 2114
+set osd_flytimer_pos = 406
+set osd_ontimer_pos = 374
+set osd_flymode_pos = 364
+set osd_horizon_pos = 200
+set osd_current_pos = 2146
+set osd_mah_drawn_pos = 2254
+set osd_craft_name_pos = 2434
+set osd_altitude_pos = 2210
+set osd_power_pos = 79
+set vcd_video_system = 2
 
 # profile
-profile 0
+profile 2
 
+set d_lowpass_type = PT1
+set d_lowpass = 110
 rateprofile 0
 
 # rateprofile
@@ -80,6 +90,6 @@ rateprofile 0
 
 set rc_expo = 20
 set rc_yaw_expo = 20
-set roll_srate = 71
-set pitch_srate = 71
-set yaw_srate = 71
+set roll_srate = 72
+set pitch_srate = 72
+set yaw_srate = 72
