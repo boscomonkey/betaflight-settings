@@ -4,7 +4,7 @@
 # Betaflight / OMNIBUSF4SD 3.1.7 Apr  3 2017 / 22:15:40 (e1c4b5c)
 
 # name
-name Bosco Genius215
+name Bosco G215
 
 # resources
 
@@ -20,6 +20,7 @@ feature TELEMETRY
 feature CURRENT_METER
 
 # beeper
+beeper -ON_USB
 
 # map
 
@@ -54,12 +55,14 @@ set debug_mode = NOTCH
 set digital_idle_percent =  2.900
 set motor_pwm_protocol = DSHOT600
 set serialrx_provider = SBUS
-set ibat_scale = 900
+set tlm_inversion = OFF
+set ibat_scale = 762
 set gyro_lowpass = 80
 set gyro_notch1_hz = 155
 set gyro_notch1_cut = 125
 set gyro_notch2_hz = 250
 set gyro_notch2_cut = 200
+set deadband = 6
 set yaw_deadband = 4
 set failsafe_delay = 2
 set baro_hardware = AUTO
@@ -68,16 +71,15 @@ set blackbox_rate_denom = 8
 set sdcard_dma = OFF
 set osd_units = METRIC
 set osd_cap_alarm = 1100
-set osd_vbat_pos = 2126
+set osd_vbat_pos = 2478
 set osd_flytimer_pos = 2518
 set osd_ontimer_pos = 2486
-set osd_flymode_pos = 2466
-set osd_crosshairs = 2048
+set osd_flymode_pos = 2465
 set osd_horizon_pos = 200
-set osd_current_pos = 2082
-set osd_mah_drawn_pos = 2094
-set osd_craft_name_pos = 2498
-set osd_altitude_pos = 2103
+set osd_current_pos = 2471
+set osd_mah_drawn_pos = 2510
+set osd_craft_name_pos = 2497
+set osd_altitude_pos = 2455
 set osd_power_pos = 79
 
 # profile
@@ -95,6 +97,6 @@ rateprofile 0
 
 set rc_expo = 20
 set rc_yaw_expo = 20
-set roll_srate = 72
-set pitch_srate = 72
-set yaw_srate = 72
+set roll_srate = 73
+set pitch_srate = 73
+set yaw_srate = 73
