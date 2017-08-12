@@ -3,8 +3,8 @@
 name Bosco-R215
 resource MOTOR 1 A02
 resource MOTOR 2 A03
-resource MOTOR 3 B09
-resource MOTOR 4 B08
+resource MOTOR 3 B08
+resource MOTOR 4 B09
 
 feature -RX_PPM
 feature -CURRENT_METER
@@ -22,15 +22,12 @@ aux 5 13 1 1300 1700
 aux 6 26 3 1700 2100
 aux 7 19 5 1300 1700
 set debug_mode = NOTCH
-set digital_idle_percent =  3.600
+set digital_idle_percent =  3.200
 set motor_pwm_protocol = DSHOT600
 set serialrx_provider = SBUS
 set vbat_scale = 112
 set gyro_sync_denom = 2
 set gyro_lowpass = 100
-set gyro_notch1_hz = 0
-set gyro_notch1_cut = 0
-set gyro_notch2_cut = 150
 set deadband = 4
 set yaw_deadband = 3
 set failsafe_delay = 2
@@ -53,8 +50,10 @@ set osd_pid_yaw_pos = 289
 set vcd_video_system = 2
 profile 0
 
+set d_lowpass_type = PT1
 set d_lowpass = 110
-set d_notch_hz = 220
+set d_notch_hz = 250
+set d_notch_cut = 150
 rateprofile 0
 rateprofile 0
 
