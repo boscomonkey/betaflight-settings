@@ -1,5 +1,5 @@
 # diff
-# Betaflight / OMNIBUS (OMNI) 3.2.0 Sep 11 2017 / 06:43:51 (649ccd7c7) MSP API: 1.36
+# Betaflight / OMNIBUS (OMNI) 3.2.0 Sep 28 2017 / 16:38:02 (ceb6f70) MSP API: 1.36
 name Bosco Red215
 resource MOTOR 2 A02
 resource MOTOR 3 B09
@@ -18,7 +18,7 @@ aux 0 0 4 1700 2100
 aux 1 2 0 1700 2100
 aux 2 4 0 1300 2100
 aux 3 13 1 1300 1700
-aux 4 19 5 1300 2100
+aux 4 19 5 1700 2100
 aux 5 26 4 1700 2100
 aux 6 27 1 1700 2100
 aux 7 35 3 1700 2100
@@ -33,9 +33,11 @@ set vbat_scale = 112
 set deadband = 4
 set yaw_deadband = 8
 set pid_process_denom = 1
+set osd_vbat_pos = 2060
 set osd_rssi_pos = 40
-set osd_tim_2_pos = 2082
-set osd_flymode_pos = 2424
+set osd_tim_1_pos = 2071
+set osd_tim_2_pos = 2049
+set osd_flymode_pos = 2426
 set osd_throttle_pos = 225
 set osd_vtx_channel_pos = 377
 set osd_crosshairs = 200
@@ -43,7 +45,7 @@ set osd_ah_sbar = 200
 set osd_ah_pos = 200
 set osd_current_pos = 384
 set osd_mah_drawn_pos = 352
-set osd_craft_name_pos = 2448
+set osd_craft_name_pos = 2449
 set osd_gps_speed_pos = 218
 set osd_gps_lon_pos = 82
 set osd_gps_lat_pos = 65
@@ -52,9 +54,9 @@ set osd_home_dir_pos = 302
 set osd_home_dist_pos = 303
 set osd_compass_bar_pos = 266
 set osd_altitude_pos = 2294
-set osd_pid_roll_pos = 0
-set osd_pid_pitch_pos = 0
-set osd_pid_yaw_pos = 0
+set osd_pid_roll_pos = 2369
+set osd_pid_pitch_pos = 2401
+set osd_pid_yaw_pos = 2433
 set osd_debug_pos = 1
 set osd_power_pos = 321
 set osd_pidrate_profile_pos = 345
@@ -77,6 +79,12 @@ profile 0
 
 set dterm_lowpass_type = PT1
 set dterm_notch_hz = 0
+set p_pitch = 41
+set i_pitch = 35
+set d_pitch = 20
+set p_roll = 28
+set i_roll = 25
+set d_roll = 15
 rateprofile 0
 
 set rc_expo = 20
