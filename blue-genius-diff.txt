@@ -1,12 +1,16 @@
 # diff
 
 # version
-# Betaflight / OMNIBUSF4SD (OBSD) 3.2.0 Sep 11 2017 / 06:44:20 (649ccd7c7) MSP API: 1.36
+# Betaflight / OMNIBUSF4SD (OBSD) 3.2.0 Sep 28 2017 / 16:38:50 (ceb6f70) MSP API: 1.36
 
 # name
 name Bosco OmniF4
 
 # resources
+resource MOTOR 5 NONE
+resource MOTOR 6 NONE
+resource SERIAL_TX 11 A01
+resource SERIAL_TX 12 A08
 
 # mixer
 
@@ -16,6 +20,7 @@ name Bosco OmniF4
 
 
 # feature
+feature SOFTSERIAL
 feature TELEMETRY
 feature AIRMODE
 feature ANTI_GRAVITY
@@ -27,8 +32,8 @@ feature DYNAMIC_FILTER
 
 # serial
 serial 0 64 115200 57600 0 115200
-serial 2 32 115200 57600 0 115200
-serial 5 2048 115200 57600 0 115200
+serial 30 32 115200 57600 0 115200
+serial 31 2048 115200 57600 0 115200
 
 # led
 
@@ -54,11 +59,13 @@ set dshot_idle_value = 350
 set motor_pwm_protocol = DSHOT600
 set pid_process_denom = 1
 set osd_rssi_pos = 40
+set osd_flymode_pos = 2392
 set osd_throttle_pos = 225
 set osd_vtx_channel_pos = 377
 set osd_crosshairs = 200
 set osd_ah_sbar = 200
 set osd_ah_pos = 200
+set osd_craft_name_pos = 2416
 set osd_gps_speed_pos = 218
 set osd_gps_lon_pos = 82
 set osd_gps_lat_pos = 65
@@ -66,6 +73,7 @@ set osd_gps_sats_pos = 51
 set osd_home_dir_pos = 302
 set osd_home_dist_pos = 303
 set osd_compass_bar_pos = 266
+set osd_altitude_pos = 2294
 set osd_pid_roll_pos = 423
 set osd_pid_pitch_pos = 455
 set osd_pid_yaw_pos = 487
