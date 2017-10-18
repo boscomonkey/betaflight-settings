@@ -22,7 +22,6 @@ aux 4 19 5 1700 2100
 aux 5 26 4 1700 2100
 aux 6 27 1 1700 2100
 aux 7 35 3 1700 2100
-set gyro_sync_denom = 2
 set gyro_notch1_hz = 0
 set gyro_notch2_hz = 0
 set serialrx_provider = SBUS
@@ -32,7 +31,7 @@ set current_meter = NONE
 set vbat_scale = 112
 set deadband = 4
 set yaw_deadband = 8
-set pid_process_denom = 1
+set pid_process_denom = 2
 set osd_vbat_pos = 2060
 set osd_rssi_pos = 40
 set osd_tim_1_pos = 2071
@@ -74,17 +73,11 @@ set osd_stat_min_rssi = OFF
 set osd_stat_max_alt = ON
 set osd_stat_endbatt = ON
 set osd_stat_tim_1 = ON
+set debug_mode = NOTCH
 set vcd_video_system = 2
-profile 0
+profile 1
 
-set dterm_lowpass_type = PT1
 set dterm_notch_hz = 0
-set p_pitch = 41
-set i_pitch = 35
-set d_pitch = 20
-set p_roll = 28
-set i_roll = 25
-set d_roll = 15
 rateprofile 0
 
 set rc_expo = 20
