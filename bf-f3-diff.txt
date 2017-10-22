@@ -1,5 +1,5 @@
 # diff
-# Betaflight / BETAFLIGHTF3 (BFF3) 3.2.0 Sep 28 2017 / 16:16:50 (ceb6f70) MSP API: 1.36
+# Betaflight / BETAFLIGHTF3 (BFF3) 3.2.1 Oct 15 2017 / 19:28:25 (434db9a36) MSP API: 1.36
 name Bosco BFF3
 
 feature AIRMODE
