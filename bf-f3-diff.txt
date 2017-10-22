@@ -12,7 +12,6 @@ set gyro_notch1_hz = 0
 set gyro_notch2_hz = 0
 set dshot_idle_value = 400
 set motor_pwm_protocol = DSHOT600
-set failsafe_delay = 5
 set pid_process_denom = 2
 set osd_rssi_pos = 40
 set osd_throttle_pos = 225
