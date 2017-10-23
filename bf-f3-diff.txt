@@ -9,7 +9,9 @@ serial 0 2048 115200 57600 0 115200
 serial 2 32 115200 57600 0 115200
 rxfail 3 h
 set gyro_notch1_hz = 0
+set gyro_notch1_cutoff = 0
 set gyro_notch2_hz = 0
+set gyro_notch2_cutoff = 0
 set dshot_idle_value = 400
 set motor_pwm_protocol = DSHOT600
 set pid_process_denom = 2
@@ -48,6 +50,7 @@ profile 0
 
 set dterm_lowpass_type = PT1
 set dterm_notch_hz = 0
+set dterm_notch_cutoff = 0
 rateprofile 0
 
 set rc_expo = 20
