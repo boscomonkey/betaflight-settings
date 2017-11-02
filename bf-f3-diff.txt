@@ -7,16 +7,25 @@ feature ANTI_GRAVITY
 feature DYNAMIC_FILTER
 serial 0 2048 115200 57600 0 115200
 serial 2 32 115200 57600 0 115200
+aux 0 0 4 1700 2100
+aux 1 1 0 1700 2100
+aux 2 2 0 1300 1700
+aux 3 13 1 1300 1700
+aux 4 26 4 1700 2100
+aux 5 27 1 1700 2100
+aux 6 35 3 1700 2100
+aux 7 36 6 1700 2100
 rxfail 3 h
 set gyro_notch1_hz = 0
 set gyro_notch1_cutoff = 0
 set gyro_notch2_hz = 0
 set gyro_notch2_cutoff = 0
-set dshot_idle_value = 400
+set dshot_idle_value = 300
 set motor_pwm_protocol = DSHOT600
 set pid_process_denom = 2
 set osd_rssi_pos = 40
 set osd_throttle_pos = 225
+set osd_vtx_channel_pos = 377
 set osd_crosshairs = 200
 set osd_ah_sbar = 200
 set osd_ah_pos = 200
@@ -43,9 +52,11 @@ set osd_nheading_pos = 311
 set osd_nvario_pos = 279
 set osd_esc_tmp_pos = 82
 set osd_esc_rpm_pos = 83
+set osd_stat_max_spd = OFF
 set osd_stat_min_rssi = OFF
 set osd_stat_endbatt = ON
 set osd_stat_tim_1 = ON
+set vcd_video_system = 2
 profile 0
 
 set dterm_lowpass_type = PT1
