@@ -24,6 +24,7 @@ aux 4 31 5 1700 2100
 aux 5 35 3 1700 2100
 aux 6 36 6 1700 2100
 set gyro_sync_denom = 2
+set gyro_lowpass_hz = 0
 set gyro_notch1_hz = 0
 set gyro_notch1_cutoff = 0
 set gyro_notch2_hz = 0
@@ -44,6 +45,9 @@ set pid_process_denom = 1
 profile 0
 
 set dterm_lowpass_type = PT1
+set dterm_notch_hz = 0
+set dterm_notch_cutoff = 0
+set anti_gravity_gain = 3000
 set d_pitch = 16
 set d_roll = 15
 rateprofile 0
