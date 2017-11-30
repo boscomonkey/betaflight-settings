@@ -1,9 +1,6 @@
 # diff
-# Betaflight / OMNIBUS (OMNI) 3.2.0 Sep 28 2017 / 16:38:02 (ceb6f70) MSP API: 1.36
-name Bosco Red215
-resource MOTOR 2 A02
-resource MOTOR 3 B09
-resource MOTOR 4 A03
+# Betaflight / OMNIBUS (OMNI) 3.2.1 Oct 15 2017 / 19:42:04 (434db9a36) MSP API: 1.36
+name Bosco OmniF3
 
 feature -RX_PPM
 feature RX_SERIAL
@@ -25,7 +22,7 @@ aux 7 35 3 1700 2100
 set gyro_notch1_hz = 0
 set gyro_notch2_hz = 0
 set serialrx_provider = SBUS
-set dshot_idle_value = 400
+set dshot_idle_value = 350
 set motor_pwm_protocol = DSHOT600
 set current_meter = NONE
 set vbat_scale = 112
@@ -53,9 +50,9 @@ set osd_home_dir_pos = 302
 set osd_home_dist_pos = 303
 set osd_compass_bar_pos = 266
 set osd_altitude_pos = 2294
-set osd_pid_roll_pos = 2369
-set osd_pid_pitch_pos = 2401
-set osd_pid_yaw_pos = 2433
+set osd_pid_roll_pos = 321
+set osd_pid_pitch_pos = 353
+set osd_pid_yaw_pos = 385
 set osd_debug_pos = 1
 set osd_power_pos = 321
 set osd_pidrate_profile_pos = 345
