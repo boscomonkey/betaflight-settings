@@ -120,6 +120,8 @@ set vcd_video_system = 2
 profile 0
 
 set dterm_lowpass_type = PT1
+set dterm_notch_hz = 0
+set dterm_notch_cutoff = 0
 set anti_gravity_gain = 3000
 
 # rateprofile
