@@ -4,6 +4,12 @@
 # Betaflight / OMNIBUSF4SD (OBSD) 3.2.2 Nov 11 2017 / 00:39:14 (77782e602) MSP API: 1.36
 
 # name
+# diff
+
+# version
+# Betaflight / OMNIBUSF4SD (OBSD) 3.2.4 Jan 10 2018 / 23:02:31 (90d32fd56) MSP API: 1.36
+
+# name
 name Bosco OmniF4
 
 # resources
@@ -68,6 +74,7 @@ set gyro_notch2_cutoff = 0
 set serialrx_provider = SBUS
 set dshot_idle_value = 350
 set motor_pwm_protocol = DSHOT300
+set failsafe_kill_switch = ON
 set ibata_scale = 725
 set pid_process_denom = 1
 set osd_cap_alarm = 1040
