@@ -1,12 +1,6 @@
 # diff
 
 # version
-# Betaflight / OMNIBUSF4SD (OBSD) 3.2.2 Nov 11 2017 / 00:39:14 (77782e602) MSP API: 1.36
-
-# name
-# diff
-
-# version
 # Betaflight / OMNIBUSF4SD (OBSD) 3.2.4 Jan 10 2018 / 23:02:31 (90d32fd56) MSP API: 1.36
 
 # name
@@ -33,6 +27,7 @@ feature ANTI_GRAVITY
 feature DYNAMIC_FILTER
 
 # beeper
+beeper -ON_USB
 
 # map
 
