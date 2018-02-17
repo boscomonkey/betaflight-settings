@@ -1,26 +1,35 @@
 # diff
-# Betaflight / SPRACINGF3EVO 3.1.5 Feb  7 2017 / 22:31:13 (4646f9d)
-name QX80 SPRF3 Evo
+# Betaflight / SPRACINGF3EVO (SPEV) 3.2.4 Jan 10 2018 / 23:10:00 (90d32fd56) MSP API: 1.36
+name Bosco QX80
 
 feature -RX_PPM
 feature -TELEMETRY
-feature -CURRENT_METER
 feature -RSSI_ADC
-feature -BLACKBOX
 feature -TRANSPONDER
-feature -SDCARD
 feature RX_SERIAL
+feature ANTI_GRAVITY
+feature DYNAMIC_FILTER
 serial 1 64 115200 57600 0 115200
 aux 0 0 3 1700 2100
-aux 1 27 0 1700 2100
-aux 2 2 0 900 1300
-aux 3 26 1 1700 2100
-set min_throttle = 1030
+aux 1 2 0 900 1300
+aux 2 27 1 1700 2100
+aux 3 28 0 1700 2100
+set gyro_notch1_hz = 0
+set gyro_notch2_hz = 0
+set baro_hardware = NONE
 set serialrx_provider = SBUS
+set min_throttle = 1055
 set failsafe_delay = 2
+set failsafe_kill_switch = ON
+set current_meter = NONE
+set deadband = 4
+set yaw_deadband = 4
 set pid_process_denom = 2
 profile 0
 
+set dterm_lowpass_type = PT1
+set dterm_notch_hz = 0
+set anti_gravity_gain = 3000
 set p_pitch = 60
 set i_pitch = 45
 set d_pitch = 40
@@ -28,7 +37,5 @@ set p_roll = 60
 set i_roll = 45
 set d_roll = 40
 rateprofile 0
-rateprofile 0
 
 set rc_expo = 20
-set rc_yaw_expo = 20
