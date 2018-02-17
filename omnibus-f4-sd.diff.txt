@@ -1,0 +1,146 @@
+# diff
+
+# version
+# Betaflight / OMNIBUSF4SD (OBSD) 3.2.4 Jan 10 2018 / 23:02:31 (90d32fd56) MSP API: 1.36
+
+# name
+name Bosco OmniF4
+
+# resources
+resource MOTOR 5 NONE
+resource MOTOR 6 NONE
+resource SERIAL_TX 11 A01
+resource SERIAL_TX 12 A08
+
+# mixer
+
+# servo
+
+# servo mix
+
+
+# feature
+feature SOFTSERIAL
+feature TELEMETRY
+feature AIRMODE
+feature ANTI_GRAVITY
+feature DYNAMIC_FILTER
+
+# beeper
+beeper -ON_USB
+
+# map
+
+# serial
+serial 0 64 115200 57600 0 115200
+serial 30 32 115200 57600 0 115200
+serial 31 2048 115200 57600 0 115200
+
+# led
+led 0 8,12::ATO:0
+led 1 8,13::ATO:0
+led 2 8,14::ATO:0
+led 3 8,15::ATO:0
+
+# color
+
+# mode_color
+mode_color 6 1 2
+
+# aux
+aux 0 0 4 1700 2100
+aux 1 1 0 1700 2100
+aux 2 2 0 1300 1700
+aux 3 13 1 1300 1700
+aux 4 19 5 1700 2100
+aux 5 26 4 1700 2100
+aux 6 27 1 1700 2100
+aux 7 35 3 1700 2100
+aux 8 36 6 1700 2100
+
+# adjrange
+
+# rxrange
+
+# vtx
+
+# rxfail
+
+# master
+set gyro_notch1_hz = 0
+set gyro_notch1_cutoff = 0
+set gyro_notch2_hz = 0
+set gyro_notch2_cutoff = 0
+set min_check = 1000
+set max_check = 2000
+set serialrx_provider = SBUS
+set dshot_idle_value = 350
+set motor_pwm_protocol = DSHOT300
+set failsafe_kill_switch = ON
+set failsafe_throttle_low_delay = 20
+set ibata_scale = 725
+set deadband = 4
+set yaw_deadband = 4
+set pid_process_denom = 1
+set osd_cap_alarm = 1040
+set osd_alt_alarm = 122
+set osd_vbat_pos = 2448
+set osd_rssi_pos = 40
+set osd_tim_1_pos = 407
+set osd_tim_2_pos = 2455
+set osd_flymode_pos = 353
+set osd_throttle_pos = 225
+set osd_vtx_channel_pos = 377
+set osd_crosshairs = 200
+set osd_ah_sbar = 200
+set osd_ah_pos = 200
+set osd_current_pos = 2401
+set osd_mah_drawn_pos = 2416
+set osd_craft_name_pos = 2433
+set osd_gps_speed_pos = 218
+set osd_gps_lon_pos = 82
+set osd_gps_lat_pos = 65
+set osd_gps_sats_pos = 51
+set osd_home_dir_pos = 302
+set osd_home_dist_pos = 303
+set osd_compass_bar_pos = 266
+set osd_altitude_pos = 2423
+set osd_pid_roll_pos = 1
+set osd_pid_pitch_pos = 33
+set osd_pid_yaw_pos = 65
+set osd_debug_pos = 1
+set osd_power_pos = 321
+set osd_pidrate_profile_pos = 345
+set osd_warnings_pos = 329
+set osd_avg_cell_voltage_pos = 76
+set osd_pit_ang_pos = 257
+set osd_rol_ang_pos = 289
+set osd_battery_usage_pos = 392
+set osd_nheading_pos = 311
+set osd_nvario_pos = 279
+set osd_esc_tmp_pos = 82
+set osd_esc_rpm_pos = 83
+set osd_stat_max_spd = OFF
+set osd_stat_min_rssi = OFF
+set osd_stat_max_alt = ON
+set osd_stat_endbatt = ON
+set osd_stat_tim_1 = ON
+set debug_mode = NOTCH
+set vcd_video_system = 2
+
+# profile
+profile 0
+
+set dterm_lowpass_type = PT1
+set dterm_notch_hz = 0
+set dterm_notch_cutoff = 0
+set anti_gravity_gain = 3000
+
+# rateprofile
+rateprofile 0
+
+set rc_expo = 20
+set rc_expo_yaw = 20
+set roll_srate = 73
+set pitch_srate = 73
+set yaw_srate = 73

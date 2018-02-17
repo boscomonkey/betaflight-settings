@@ -1,0 +1,84 @@
+# diff
+# Betaflight / OMNIBUS (OMNI) 3.2.1 Oct 15 2017 / 19:42:04 (434db9a36) MSP API: 1.36
+name Bosco OmniF3
+
+feature -RX_PPM
+feature RX_SERIAL
+feature TELEMETRY
+feature AIRMODE
+feature DYNAMIC_FILTER
+beeper -ON_USB
+serial 0 2048 115200 57600 0 115200
+serial 1 32 115200 57600 0 115200
+serial 2 64 115200 57600 0 115200
+aux 0 0 4 1700 2100
+aux 1 2 0 1700 2100
+aux 2 4 0 1300 2100
+aux 3 13 1 1300 1700
+aux 4 19 5 1700 2100
+aux 5 26 4 1700 2100
+aux 6 27 1 1700 2100
+aux 7 35 3 1700 2100
+set gyro_notch1_hz = 0
+set gyro_notch2_hz = 0
+set serialrx_provider = SBUS
+set dshot_idle_value = 350
+set motor_pwm_protocol = DSHOT600
+set current_meter = NONE
+set vbat_scale = 112
+set deadband = 4
+set yaw_deadband = 8
+set pid_process_denom = 2
+set osd_vbat_pos = 2060
+set osd_rssi_pos = 40
+set osd_tim_1_pos = 2071
+set osd_tim_2_pos = 2049
+set osd_flymode_pos = 2426
+set osd_throttle_pos = 225
+set osd_vtx_channel_pos = 377
+set osd_crosshairs = 200
+set osd_ah_sbar = 200
+set osd_ah_pos = 200
+set osd_current_pos = 384
+set osd_mah_drawn_pos = 352
+set osd_craft_name_pos = 2449
+set osd_gps_speed_pos = 218
+set osd_gps_lon_pos = 82
+set osd_gps_lat_pos = 65
+set osd_gps_sats_pos = 51
+set osd_home_dir_pos = 302
+set osd_home_dist_pos = 303
+set osd_compass_bar_pos = 266
+set osd_altitude_pos = 2294
+set osd_pid_roll_pos = 321
+set osd_pid_pitch_pos = 353
+set osd_pid_yaw_pos = 385
+set osd_debug_pos = 1
+set osd_power_pos = 321
+set osd_pidrate_profile_pos = 345
+set osd_warnings_pos = 329
+set osd_avg_cell_voltage_pos = 76
+set osd_pit_ang_pos = 257
+set osd_rol_ang_pos = 289
+set osd_battery_usage_pos = 392
+set osd_nheading_pos = 311
+set osd_nvario_pos = 279
+set osd_esc_tmp_pos = 82
+set osd_esc_rpm_pos = 83
+set osd_stat_max_spd = OFF
+set osd_stat_min_rssi = OFF
+set osd_stat_max_alt = ON
+set osd_stat_endbatt = ON
+set osd_stat_tim_1 = ON
+set debug_mode = NOTCH
+set vcd_video_system = 2
+profile 1
+
+set dterm_notch_hz = 0
+rateprofile 0
+
+set rc_expo = 20
+set rc_expo_yaw = 20
+set roll_srate = 73
+set pitch_srate = 73
+set yaw_srate = 73
