@@ -1,0 +1,80 @@
+# diff
+
+# version
+# Betaflight / CLRACINGF4 (CLR4) 3.3.0 Mar  2 2018 / 03:39:18 (177472b4f) MSP API: 1.37
+
+# name
+name Bosco Floss2
+
+# resources
+
+# mixer
+
+# servo
+
+# servo mix
+
+
+# feature
+feature TELEMETRY
+feature AIRMODE
+feature ANTI_GRAVITY
+feature DYNAMIC_FILTER
+
+# beeper
+
+# map
+
+# serial
+serial 0 64 115200 57600 0 115200
+serial 2 32 115200 57600 0 115200
+serial 3 2048 115200 57600 0 115200
+
+# led
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 4 1700 2100 0
+aux 1 1 0 1700 2100 0
+aux 2 2 0 1300 1700 0
+aux 3 27 1 1700 2100 0
+aux 4 13 1 1300 1700 0
+aux 5 26 4 1700 2100 0
+aux 6 35 3 1700 2100 0
+aux 7 36 6 1700 2100 0
+
+# adjrange
+
+# rxrange
+
+# vtx
+
+# rxfail
+
+# master
+set gyro_notch1_hz = 0
+set gyro_notch2_hz = 0
+set serialrx_provider = SBUS
+set dshot_idle_value = 300
+set motor_pwm_protocol = DSHOT600
+set align_board_yaw = 180
+set beeper_frequency = 0
+set beeper_dshot_beacon_tone = 2
+set pid_process_denom = 1
+set osd_warnings = 63
+set osd_cap_alarm = 1040
+set osd_disarmed_pos = 2282
+set osd_stat_max_spd = OFF
+set osd_stat_endbatt = ON
+set debug_mode = NOTCH
+
+# profile
+profile 0
+
+set dterm_lowpass_type = PT1
+
+# rateprofile
+rateprofile 0
