@@ -1,0 +1,6 @@
+
+
+		CLR		Default
+
+tlm_inverted	OFF	ON	OFF	ON
+tlm_halfduplex	OFF	OFF	ON	ON
