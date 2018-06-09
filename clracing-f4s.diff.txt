@@ -1,7 +1,7 @@
 # diff
 
 # version
-# Betaflight / CLRACINGF4 (CLR4) 3.3.2 May  4 2018 / 09:23:35 (64a292f37) MSP API: 1.38
+# Betaflight / CLRACINGF4 (CLR4) 3.3.3 May 31 2018 / 12:56:13 (3565182d3) MSP API: 1.38
 
 # name
 name Bosco Floss
@@ -65,6 +65,7 @@ set serialrx_provider = SBUS
 set dshot_idle_value = 350
 set motor_pwm_protocol = DSHOT600
 set align_board_yaw = 180
+set ibata_scale = 255
 set beeper_frequency = 0
 set beeper_dshot_beacon_tone = 2
 set yaw_motors_reversed = ON
@@ -74,10 +75,9 @@ set pid_process_denom = 1
 set osd_warnings = 63
 set osd_cap_alarm = 1000
 set osd_vbat_pos = 2446
-set osd_tim_1_pos = 2455
-set osd_tim_2_pos = 2423
+set osd_tim_2_pos = 2454
 set osd_vtx_channel_pos = 2401
-set osd_current_pos = 342
+set osd_current_pos = 2422
 set osd_mah_drawn_pos = 2415
 set osd_craft_name_pos = 2433
 set osd_pid_roll_pos = 65
@@ -94,11 +94,13 @@ set vtx_freq = 5945
 set vcd_video_system = 2
 
 # profile
-profile 0
+profile 1
 
 set dterm_lowpass_type = PT1
 set dterm_notch_hz = 0
 set anti_gravity_gain = 3000
+set setpoint_relax_ratio = 1
+set dterm_setpoint_weight = 100
 
 # rateprofile
 rateprofile 0
