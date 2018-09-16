@@ -1,7 +1,10 @@
-# diff
+# diff all
 
 # version
 # Betaflight / OMNIBUSF4SD (OBSD) 3.2.5 Feb 11 2018 / 00:49:36 (6e69ff00c) MSP API: 1.36
+
+# reset configuration to default settings
+defaults nosave
 
 # name
 name Bosco OmniF4
@@ -135,6 +138,25 @@ set dterm_lowpass_type = PT1
 set dterm_notch_hz = 0
 set dterm_notch_cutoff = 0
 set anti_gravity_gain = 3000
+set setpoint_relax_ratio = 1
+set dterm_setpoint_weight = 100
+set p_pitch = 50
+set d_pitch = 27
+set p_roll = 46
+set i_roll = 45
+set d_roll = 25
+set p_yaw = 65
+
+# profile
+profile 1
+
+
+# profile
+profile 2
+
+
+# restore original profile selection
+profile 0
 
 # rateprofile
 rateprofile 0
@@ -144,3 +166,19 @@ set rc_expo_yaw = 20
 set roll_srate = 73
 set pitch_srate = 73
 set yaw_srate = 73
+set tpa_rate = 35
+set tpa_breakpoint = 1050
+
+# rateprofile
+rateprofile 1
+
+
+# rateprofile
+rateprofile 2
+
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
