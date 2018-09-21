@@ -1,7 +1,10 @@
-# diff
+# diff all
 
 # version
 # Betaflight / CLRACINGF4 (CLR4) 3.3.3 May 31 2018 / 12:56:13 (3565182d3) MSP API: 1.38
+
+# reset configuration to default settings
+defaults nosave
 
 # name
 name Bosco Floss
@@ -128,5 +131,41 @@ set i_roll = 45
 set d_roll = 25
 set p_yaw = 65
 
+# restore original profile selection
+profile 2
+
 # rateprofile
 rateprofile 0
+
+
+# rateprofile
+rateprofile 1
+
+set roll_srate = 74
+set pitch_srate = 74
+set yaw_srate = 74
+
+# rateprofile
+rateprofile 2
+
+set roll_srate = 79
+set pitch_srate = 79
+set yaw_srate = 79
+
+# rateprofile
+rateprofile 3
+
+
+# rateprofile
+rateprofile 4
+
+
+# rateprofile
+rateprofile 5
+
+
+# restore original rateprofile selection
+rateprofile 2
+
+# save configuration
+save
