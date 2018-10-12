@@ -67,7 +67,9 @@ adjrange 5 2 2 1700 2100 12 2
 # master
 set gyro_lowpass_hz = 120
 set gyro_notch1_hz = 0
+set gyro_notch1_cutoff = 0
 set gyro_notch2_hz = 0
+set gyro_notch2_cutoff = 0
 set serialrx_provider = SBUS
 set dshot_idle_value = 350
 set motor_pwm_protocol = DSHOT600
@@ -121,6 +123,7 @@ profile 2
 
 set dterm_lowpass_type = PT1
 set dterm_notch_hz = 0
+set dterm_notch_cutoff = 0
 set anti_gravity_gain = 3000
 set setpoint_relax_ratio = 1
 set dterm_setpoint_weight = 100
@@ -137,20 +140,23 @@ profile 2
 # rateprofile
 rateprofile 0
 
+set roll_srate = 79
+set pitch_srate = 79
+set yaw_srate = 79
 
 # rateprofile
 rateprofile 1
 
-set roll_srate = 74
-set pitch_srate = 74
-set yaw_srate = 74
+set roll_srate = 81
+set pitch_srate = 81
+set yaw_srate = 81
 
 # rateprofile
 rateprofile 2
 
-set roll_srate = 79
-set pitch_srate = 79
-set yaw_srate = 79
+set roll_srate = 83
+set pitch_srate = 83
+set yaw_srate = 83
 
 # rateprofile
 rateprofile 3
@@ -165,7 +171,7 @@ rateprofile 5
 
 
 # restore original rateprofile selection
-rateprofile 2
+rateprofile 0
 
 # save configuration
 save
