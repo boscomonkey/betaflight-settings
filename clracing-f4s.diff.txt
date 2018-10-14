@@ -140,23 +140,23 @@ profile 2
 # rateprofile
 rateprofile 0
 
-set roll_srate = 79
-set pitch_srate = 79
-set yaw_srate = 79
-
-# rateprofile
-rateprofile 1
-
 set roll_srate = 81
 set pitch_srate = 81
 set yaw_srate = 81
 
 # rateprofile
+rateprofile 1
+
+set roll_srate = 79
+set pitch_srate = 79
+set yaw_srate = 79
+
+# rateprofile
 rateprofile 2
 
-set roll_srate = 83
-set pitch_srate = 83
-set yaw_srate = 83
+set roll_srate = 55
+set pitch_srate = 55
+set yaw_srate = 55
 
 # rateprofile
 rateprofile 3
