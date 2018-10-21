@@ -98,8 +98,9 @@ set osd_stat_max_spd = OFF
 set osd_stat_endbatt = ON
 set debug_mode = NOTCH
 set vtx_band = 3
-set vtx_channel = 8
-set vtx_freq = 5945
+set vtx_channel = 6
+set vtx_power = 2
+set vtx_freq = 5905
 set vcd_video_system = 2
 
 # profile
