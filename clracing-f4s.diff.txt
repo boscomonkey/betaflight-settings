@@ -1,7 +1,12 @@
 # diff all
 
 # version
-# Betaflight / CLRACINGF4 (CLR4) 3.3.3 May 31 2018 / 12:56:13 (3565182d3) MSP API: 1.38
+# Betaflight / CLRACINGF4 (CLR4) 3.5.2 Oct 16 2018 / 21:46:10 (a5e270fee) MSP API: 1.40
+
+board_name CLRACINGF4
+manufacturer_id 
+mcu_id 0036001e3536470439363130
+signature 
 
 # reset configuration to default settings
 defaults nosave
@@ -11,7 +16,6 @@ name Bosco Floss
 
 # resources
 resource MOTOR 5 NONE
-resource LED_STRIP 1 NONE
 resource SERIAL_TX 11 B08
 
 # mixer
@@ -25,10 +29,12 @@ resource SERIAL_TX 11 B08
 feature SOFTSERIAL
 feature TELEMETRY
 feature AIRMODE
-feature ANTI_GRAVITY
-feature DYNAMIC_FILTER
 
 # beeper
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
 
 # map
 
@@ -44,19 +50,17 @@ serial 30 32 115200 57600 0 115200
 # mode_color
 
 # aux
-aux 0 0 4 1700 2100 0
-aux 1 1 0 1700 2100 0
-aux 2 2 0 1300 1700 0
-aux 3 27 1 1700 2100 0
-aux 4 13 1 1300 1700 0
-aux 5 26 4 1700 2100 0
-aux 6 35 3 1700 2100 0
-aux 7 36 6 1700 2100 0
+aux 0 0 3 1300 2100 0 0
+aux 1 27 1 1700 2100 0 0
+aux 2 13 1 1300 1700 0 0
+aux 3 26 3 1300 2100 0 0
+aux 4 35 2 1700 2100 0 0
+aux 5 36 0 1700 2100 0 0
+aux 6 47 3 1700 2100 0 0
 
 # adjrange
-adjrange 3 0 2 900 1300 12 2
-adjrange 4 1 2 1300 1700 12 2
-adjrange 5 2 2 1700 2100 12 2
+adjrange 3 0 2 900 1300 12 2 0 0
+adjrange 4 1 2 1300 1700 12 2 0 0
 
 # rxrange
 
@@ -65,23 +69,15 @@ adjrange 5 2 2 1700 2100 12 2
 # rxfail
 
 # master
-set gyro_lowpass_hz = 120
-set gyro_notch1_hz = 0
-set gyro_notch1_cutoff = 0
-set gyro_notch2_hz = 0
-set gyro_notch2_cutoff = 0
+set rc_smoothing_type = FILTER
 set serialrx_provider = SBUS
-set dshot_idle_value = 350
+set dshot_idle_value = 400
 set motor_pwm_protocol = DSHOT600
+set failsafe_switch_mode = STAGE2
 set align_board_yaw = 180
 set ibata_scale = 255
-set beeper_frequency = 0
-set beeper_dshot_beacon_tone = 2
 set yaw_motors_reversed = ON
-set deadband = 2
-set yaw_deadband = 2
 set pid_process_denom = 1
-set osd_warnings = 63
 set osd_cap_alarm = 1000
 set osd_vbat_pos = 2446
 set osd_tim_2_pos = 2454
@@ -96,49 +92,30 @@ set osd_pidrate_profile_pos = 2407
 set osd_warnings_pos = 329
 set osd_stat_max_spd = OFF
 set osd_stat_endbatt = ON
-set debug_mode = NOTCH
 set vtx_band = 3
 set vtx_channel = 6
-set vtx_power = 2
 set vtx_freq = 5905
-set vcd_video_system = 2
 
 # profile
 profile 0
 
-set dterm_lowpass_type = PT1
-set dterm_notch_hz = 0
-set anti_gravity_gain = 3000
+set dterm_notch_cutoff = 0
+set crash_recovery = BEEP
+set iterm_relax = RP
+set p_yaw = 40
+set i_yaw = 120
+set f_yaw = 100
 
 # profile
 profile 1
 
-set dterm_lowpass_type = PT1
-set dterm_notch_hz = 0
-set anti_gravity_gain = 3000
-set setpoint_relax_ratio = 1
-set dterm_setpoint_weight = 100
 
 # profile
 profile 2
 
-set dterm_lowpass_type = PT1
-set dterm_notch_hz = 0
-set dterm_notch_cutoff = 0
-set anti_gravity_gain = 3000
-set setpoint_relax_ratio = 1
-set dterm_setpoint_weight = 100
-set crash_delay = 25
-set crash_recovery = ON
-set p_pitch = 50
-set d_pitch = 27
-set p_roll = 46
-set i_roll = 45
-set d_roll = 25
-set p_yaw = 65
 
 # restore original profile selection
-profile 2
+profile 0
 
 # rateprofile
 rateprofile 0
@@ -150,16 +127,13 @@ set yaw_srate = 81
 # rateprofile
 rateprofile 1
 
-set roll_srate = 79
-set pitch_srate = 79
-set yaw_srate = 79
+set roll_srate = 55
+set pitch_srate = 55
+set yaw_srate = 55
 
 # rateprofile
 rateprofile 2
 
-set roll_srate = 55
-set pitch_srate = 55
-set yaw_srate = 55
 
 # rateprofile
 rateprofile 3
