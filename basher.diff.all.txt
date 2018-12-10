@@ -1,0 +1,163 @@
+# diff all
+
+# version
+# Betaflight / CLRACINGF4 (CLR4) 3.5.3 Nov 14 2018 / 23:17:07 (61d5abf00) MSP API: 1.40
+
+board_name CLRACINGF4
+manufacturer_id 
+mcu_id 003f00553436511938363236
+signature 
+
+# reset configuration to default settings
+defaults nosave
+
+# name
+name Basher
+
+# resources
+
+# mixer
+
+# servo
+
+# servo mix
+
+
+# feature
+feature TELEMETRY
+feature LED_STRIP
+feature AIRMODE
+
+# beeper
+beeper -ON_USB
+
+# beacon
+
+# map
+
+# serial
+serial 0 64 115200 57600 0 115200
+serial 2 32 115200 57600 0 115200
+
+# led
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 3 1300 2100 0 0
+aux 1 27 1 1700 2100 0 0
+aux 2 13 1 1300 1700 0 0
+aux 3 26 3 1300 2100 0 0
+aux 4 35 2 1700 2100 0 0
+aux 5 36 0 1700 2100 0 0
+aux 6 47 2 1300 1700 0 0
+
+# adjrange
+adjrange 4 0 3 1700 2100 12 3 0 0
+
+# rxrange
+
+# vtx
+
+# rxfail
+
+# master
+set acc_calibration = -43,4,-62
+set min_check = 1000
+set max_check = 2000
+set rc_smoothing_type = FILTER
+set serialrx_provider = SBUS
+set dshot_idle_value = 350
+set motor_pwm_protocol = DSHOT600
+set failsafe_switch_mode = STAGE2
+set ibata_scale = 256
+set beeper_frequency = 0
+set yaw_motors_reversed = ON
+set deadband = 4
+set yaw_deadband = 4
+set pid_process_denom = 1
+set tlm_halfduplex = OFF
+set frsky_vfas_precision = 1
+set osd_warn_core_temp = OFF
+set osd_cap_alarm = 1040
+set osd_vbat_pos = 2446
+set osd_tim_2_pos = 2454
+set osd_vtx_channel_pos = 2401
+set osd_current_pos = 2422
+set osd_mah_drawn_pos = 2415
+set osd_craft_name_pos = 2433
+set osd_pid_roll_pos = 65
+set osd_pid_pitch_pos = 33
+set osd_pid_yaw_pos = 97
+set osd_pidrate_profile_pos = 2407
+set osd_warnings_pos = 329
+set osd_stat_max_spd = OFF
+set osd_stat_endbatt = ON
+set debug_mode = FFT_FREQ
+set vtx_band = 3
+set vtx_channel = 6
+set vtx_freq = 5905
+set vcd_video_system = NTSC
+
+# profile
+profile 0
+
+set dterm_notch_cutoff = 0
+set crash_recovery = ON
+set iterm_relax = RP
+set i_pitch = 65
+set p_yaw = 40
+set i_yaw = 120
+set f_yaw = 100
+
+# profile
+profile 1
+
+
+# profile
+profile 2
+
+
+# restore original profile selection
+profile 0
+
+# rateprofile
+rateprofile 0
+
+set roll_srate = 81
+set pitch_srate = 81
+set yaw_srate = 81
+
+# rateprofile
+rateprofile 1
+
+set roll_srate = 81
+set pitch_srate = 81
+set yaw_srate = 81
+
+# rateprofile
+rateprofile 2
+
+set roll_srate = 55
+set pitch_srate = 55
+set yaw_srate = 55
+
+# rateprofile
+rateprofile 3
+
+
+# rateprofile
+rateprofile 4
+
+
+# rateprofile
+rateprofile 5
+
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
