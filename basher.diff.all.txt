@@ -56,7 +56,7 @@ aux 5 36 0 1700 2100 0 0
 aux 6 47 2 1300 1700 0 0
 
 # adjrange
-adjrange 4 0 3 1700 2100 12 3 0 0
+adjrange 0 0 3 1300 1700 12 3 0 0
 
 # rxrange
 
@@ -130,9 +130,6 @@ profile 0
 # rateprofile
 rateprofile 0
 
-set roll_srate = 81
-set pitch_srate = 81
-set yaw_srate = 81
 
 # rateprofile
 rateprofile 1
