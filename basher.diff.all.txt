@@ -1,7 +1,7 @@
 # diff all
 
 # version
-# Betaflight / CLRACINGF4 (CLR4) 3.5.3 Nov 14 2018 / 23:17:07 (61d5abf00) MSP API: 1.40
+# Betaflight / CLRACINGF4 (CLR4) 3.5.4 Dec 17 2018 / 11:36:37 (66b8ea143) MSP API: 1.40
 
 board_name CLRACINGF4
 manufacturer_id 
@@ -73,6 +73,8 @@ set serialrx_provider = SBUS
 set dshot_idle_value = 350
 set motor_pwm_protocol = DSHOT600
 set failsafe_switch_mode = STAGE2
+set vbat_min_cell_voltage = 31
+set vbat_warning_cell_voltage = 33
 set ibata_scale = 256
 set beeper_frequency = 0
 set yaw_motors_reversed = ON
@@ -108,6 +110,7 @@ profile 0
 set dterm_notch_cutoff = 0
 set crash_recovery = ON
 set iterm_relax = RP
+set acro_trainer_angle_limit = 45
 set i_pitch = 65
 set p_yaw = 40
 set i_yaw = 120
