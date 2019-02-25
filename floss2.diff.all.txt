@@ -1,7 +1,7 @@
 # diff all
 
 # version
-# Betaflight / CLRACINGF4 (CLR4) 3.5.3 Nov 14 2018 / 23:17:07 (61d5abf00) MSP API: 1.40
+# Betaflight / CLRACINGF4 (CLR4) 3.5.6 Feb 16 2019 / 12:46:06 (c28ca22f9) MSP API: 1.40
 
 board_name CLRACINGF4
 manufacturer_id 
@@ -56,11 +56,10 @@ aux 2 13 1 1300 1700 0 0
 aux 3 26 3 1300 2100 0 0
 aux 4 35 2 1700 2100 0 0
 aux 5 36 0 1700 2100 0 0
-aux 6 47 3 1700 2100 0 0
+aux 6 47 2 1300 1700 0 0
 
 # adjrange
-adjrange 3 0 2 900 1300 12 2 0 0
-adjrange 4 1 2 1300 1700 12 2 0 0
+adjrange 0 0 3 900 1300 12 3 0 0
 
 # rxrange
 
@@ -125,20 +124,20 @@ profile 0
 # rateprofile
 rateprofile 0
 
+
+# rateprofile
+rateprofile 1
+
 set roll_srate = 81
 set pitch_srate = 81
 set yaw_srate = 81
 
 # rateprofile
-rateprofile 1
+rateprofile 2
 
 set roll_srate = 55
 set pitch_srate = 55
 set yaw_srate = 55
-
-# rateprofile
-rateprofile 2
-
 
 # rateprofile
 rateprofile 3
