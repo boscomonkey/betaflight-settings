@@ -1,53 +1,41 @@
-# diff all
+diff all
 
 # version
-# Betaflight / CLRACINGF4 (CLR4) 3.5.6 Feb 16 2019 / 12:46:06 (c28ca22f9) MSP API: 1.40
+# Betaflight / STM32F405 (S405) 4.1.1 Nov 15 2019 / 12:54:53 (1e5e3d369) MSP API: 1.42
+# manufacturer_id: CLRA   board_name: CLRACINGF4   custom defaults: YES
 
-board_name CLRACINGF4
-manufacturer_id 
-mcu_id 0036001e3536470439363130
-signature 
+# start the command batch
+batch start
 
 # reset configuration to default settings
 defaults nosave
 
-# name
-name Bosco Floss
+board_name CLRACINGF4
+manufacturer_id CLRA
+mcu_id 0036001e3536470439363130
+signature 
+
+# name: Bosco F2
 
 # resources
 resource MOTOR 5 NONE
+resource LED_STRIP 1 NONE
 resource SERIAL_TX 11 B08
 
-# mixer
-
-# servo
-
-# servo mix
-
-
 # feature
+feature -RX_PARALLEL_PWM
+feature RX_SERIAL
 feature SOFTSERIAL
 feature TELEMETRY
-feature AIRMODE
-
-# beeper
 
 # beacon
 beacon RX_LOST
 beacon RX_SET
 
-# map
-
 # serial
 serial 0 64 115200 57600 0 115200
 serial 3 2048 115200 57600 0 115200
 serial 30 32 115200 57600 0 115200
-
-# led
-
-# color
-
-# mode_color
 
 # aux
 aux 0 0 3 1300 2100 0 0
@@ -59,27 +47,36 @@ aux 5 36 0 1700 2100 0 0
 aux 6 47 2 1300 1700 0 0
 
 # adjrange
-adjrange 0 0 3 900 1300 12 3 0 0
+adjrange 0 0 3 900 1700 12 3 0 0
+adjrange 1 0 3 1700 2100 12 3 0 0
 
-# rxrange
-
-# vtx
-
-# rxfail
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665 5645 5885 5905 5925 5945
+vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 IMD6     I CUSTOM  5732 5765 5828 5840 5866 5740 5399 5362
+vtxtable powerlevels 2
+vtxtable powervalues 0 1
+vtxtable powerlabels 25 200
 
 # master
-set acc_calibration = -82,90,-172
-set rc_smoothing_type = FILTER
+set acc_calibration = -86,5,-188
+set mag_hardware = NONE
+set baro_hardware = NONE
 set serialrx_provider = SBUS
 set dshot_idle_value = 400
-set motor_pwm_protocol = DSHOT600
-set failsafe_switch_mode = STAGE2
 set align_board_yaw = 180
 set ibata_scale = 255
 set yaw_motors_reversed = ON
 set deadband = 2
 set yaw_deadband = 2
-set pid_process_denom = 1
+set osd_warn_launch_control = OFF
+set osd_warn_no_gps_rescue = OFF
+set osd_warn_gps_rescue_disabled = OFF
 set osd_cap_alarm = 1000
 set osd_vbat_pos = 2446
 set osd_tim_2_pos = 2454
@@ -90,69 +87,53 @@ set osd_craft_name_pos = 2433
 set osd_pid_roll_pos = 65
 set osd_pid_pitch_pos = 33
 set osd_pid_yaw_pos = 97
-set osd_pidrate_profile_pos = 2407
+set osd_pidrate_profile_pos = 2442
 set osd_warnings_pos = 329
 set osd_stat_max_spd = OFF
 set osd_stat_endbatt = ON
-set debug_mode = FFT_FREQ
 set vtx_band = 3
 set vtx_channel = 6
+set vtx_power = 2
+set vtx_low_power_disarm = ON
 set vtx_freq = 5905
+set name = Bosco F2
 
-# profile
 profile 0
 
-set dterm_notch_cutoff = 0
+# profile 0
 set crash_recovery = ON
-set iterm_relax = RP
-set i_pitch = 65
-set p_yaw = 40
-set i_yaw = 120
-set f_yaw = 100
-
-# profile
 profile 1
 
-
-# profile
 profile 2
-
 
 # restore original profile selection
 profile 0
 
-# rateprofile
 rateprofile 0
 
-
-# rateprofile
 rateprofile 1
 
+# rateprofile 1
 set roll_srate = 81
 set pitch_srate = 81
 set yaw_srate = 81
 
-# rateprofile
 rateprofile 2
 
+# rateprofile 2
 set roll_srate = 55
 set pitch_srate = 55
 set yaw_srate = 55
 
-# rateprofile
 rateprofile 3
 
-
-# rateprofile
 rateprofile 4
 
-
-# rateprofile
 rateprofile 5
-
 
 # restore original rateprofile selection
 rateprofile 0
 
 # save configuration
 save
+#
