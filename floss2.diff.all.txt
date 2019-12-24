@@ -64,11 +64,14 @@ vtxtable powervalues 0 1
 vtxtable powerlabels 25 200
 
 # master
+set dyn_notch_width_percent = 0
+set dyn_notch_q = 250
 set acc_calibration = -86,5,-188
 set mag_hardware = NONE
 set baro_hardware = NONE
 set serialrx_provider = SBUS
 set dshot_idle_value = 400
+set dshot_bidir = ON
 set align_board_yaw = 180
 set ibata_scale = 255
 set yaw_motors_reversed = ON
@@ -102,6 +105,7 @@ profile 0
 
 # profile 0
 set crash_recovery = ON
+
 profile 1
 
 profile 2
